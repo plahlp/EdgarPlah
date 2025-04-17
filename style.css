@@ -13,6 +13,11 @@ body {
     color: white;
     padding: 1rem;
     text-align: center;
+    position: fixed;         /* <-- Lo hace fijo */
+    top: 0;                  /* <-- Lo pega arriba */
+    left: 0;
+    width: 100%;             /* <-- Que ocupe todo el ancho */
+    z-index: 1000;           /* <-- Que esté encima del resto */
   }
   
   nav a {
