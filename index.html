@@ -1,144 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mi Página Personal</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f2f2f2;
-      color: #333;
-    }
-
-    header {
-      background: #111;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #222;
-      gap: 20px;
-      padding: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .social-links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #1a73e8;
-    }
-
-    .product {
-      background: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #ccc;
-    }
-
-    iframe {
-      max-width: 100%;
-      border: none;
-      border-radius: 8px;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      background: #111;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    @media screen and (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <title>Edgar Plah | Página Personal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <h1>Mi Nombre</h1>
-    <p>Bienvenido a mi página personal</p>
+    <h1>Edgar Plah</h1>
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#youtube">YouTube</a>
+      <a href="#redes">Redes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#productos">Artículos</a>
-    <a href="#youtube">YouTube</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <section id="inicio" class="hero">
+    <h2>¡Hola! Soy Edgar, mecatrónico apasionado por la tecnología</h2>
+    <p>Bienvenido a mi sitio personal donde comparto mis proyectos, productos y contenido.</p>
+    <a href="#sobre-mi" class="btn">Conóceme</a>
+  </section>
 
   <section id="sobre-mi">
     <h2>Sobre mí</h2>
-    <p>Hola, soy Edgar Diaz, me dedico a CREAR PROYECTOS y esta es mi página personal.</p>
-    <div class="social-links">
-      <a href="https://instagram.com/tuusuario" target="_blank">Instagram</a>
-      <a href="https://twitter.com/tuusuario" target="_blank">Twitter</a>
-      <a href="https://www.linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+    <p>Soy estudiante de ingeniería mecatrónica. Me encanta diseñar, construir y automatizar cosas.</p>
+    <ul>
+      <li>Diseño 3D</li>
+      <li>Robótica</li>
+      <li>Programación (Python, C++, ROS)</li>
+    </ul>
+  </section>
+
+  <section id="proyectos">
+    <h2>Mis Proyectos</h2>
+    <div class="tarjeta">
+      <img src="imagenes/hexapodo.jpg" alt="Robot hexápodo">
+      <h3>Robot Hexápodo</h3>
+      <p>Escala superficies con micro arcos eléctricos.</p>
+      <a href="https://github.com/tuusuario/hexapodo">Ver en GitHub</a>
     </div>
   </section>
 
-  <section id="productos">
-    <h2>Artículos en venta</h2>
-    <div class="product">
-      <h3>Producto 1</h3>
-      <p>Descripción del producto 1.</p>
-      <strong>$100 MXN</strong>
-    </div>
-    <div class="product">
-      <h3>Producto 2</h3>
-      <p>Descripción del producto 2.</p>
-      <strong>$200 MXN</strong>
+  <section id="tienda">
+    <h2>Proyectos en venta</h2>
+    <div class="tarjeta">
+      <img src="imagenes/sensor.jpg" alt="Sensor de luz">
+      <h3>Sensor de luz inteligente</h3>
+      <p>Automatiza la iluminación de tu casa.</p>
+      <a href="https://wa.me/52XXXXXXXXXX" class="btn">Comprar</a>
     </div>
   </section>
 
   <section id="youtube">
-    <h2>Último video</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ID_DEL_VIDEO" allowfullscreen></iframe>
+    <h2>Último video de YouTube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ID_DEL_VIDEO" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="redes">
+    <h2>Mis redes sociales</h2>
+    <a href="https://instagram.com/tuusuario">Instagram</a> |
+    <a href="https://youtube.com/@tuusuario">YouTube</a> |
+    <a href="https://github.com/tuusuario">GitHub</a>
   </section>
 
   <section id="contacto">
     <h2>Contacto</h2>
-    <p>¿Te interesa un proyecto o colaboración? Envíame un mensaje:</p>
-    <form>
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu correo" required />
-      <textarea rows="5" placeholder="Tu mensaje"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <p>Email: edgarplah@gmail.com</p>
+    <p>WhatsApp: <a href="https://wa.me/52XXXXXXXXXX">+52 XXXXXXXX</a></p>
   </section>
 
+  <footer>
+    <p>© 2025 Edgar Plah. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
