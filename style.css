@@ -398,6 +398,13 @@
     scroll-margin-top: 90px;
   }
 
-  
+  @media (max-width: 768px) {
+    #sobre-mi,
+    #proyectos,
+    #tienda,
+    #redes {
+      scroll-margin-top: 60px; /* O ajusta según el alto real de tu navbar shrink en móvil */
+    }
+  } 
   
   
