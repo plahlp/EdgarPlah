@@ -291,7 +291,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     flex-wrap: wrap;
     transition: all 0.4s ease;
@@ -367,4 +367,37 @@
       font-size: 2rem;
     }
   }
+
+  #sobre-mi {
+    scroll-margin-top: 230px; /* Por ejemplo, esta tiene mucho contenido arriba */
+  }
+  
+  #proyectos {
+    scroll-margin-top: 270px; /* Un poco menos */
+  }
+  
+  #tienda {
+    scroll-margin-top: 390px; /* Ajustado para esta sección */
+  }
+  
+  #redes {
+    scroll-margin-top: 335px; /* Contacto / redes sociales */
+  }
+ 
+    /* Cuando shrink está activo */
+  body.navbar-shrink #sobre-mi {
+    scroll-margin-top: 100px;
+  }
+  body.navbar-shrink #proyectos {
+    scroll-margin-top: 100px;
+  }
+  body.navbar-shrink #tienda {
+    scroll-margin-top: 90px;
+  }
+  body.navbar-shrink #redes {
+    scroll-margin-top: 90px;
+  }
+
+  
+  
   

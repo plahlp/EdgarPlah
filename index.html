@@ -36,8 +36,9 @@
         <img src="imagenes/img1_bienvenida.jpg" alt="Bienvenida" class="img_">
       </div>
       <div class="header-texto">
-        <h2>¡Bienvenido a mi sitio!</h2>
-        <p>Explora mis proyectos, tienda y redes sociales.</p>
+        <h2>Hola :)</h2>
+        <p>Bienvenido a mi sitio personal donde comparto</p>
+        <p>mis proyectos, productos y contenido.</p>
       </div>
     </div>
   </header>
@@ -49,12 +50,13 @@
   
   
   
-
+<!--
   <section id="inicio" class="hero">
     <h2>¡Hola! Soy Edgar, mecatrónico apasionado por la tecnología</h2>
     <p>Bienvenido a mi sitio personal donde comparto mis proyectos, productos y contenido.</p>
     <a href="#sobre-mi" class="btn">Conóceme</a>
   </section>
+-->
 
   <section id="sobre-mi">
     <h2>Sobre mí</h2>
@@ -213,13 +215,16 @@
   <script>
     window.addEventListener('scroll', function () {
       const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
+      if (window.scrollY > 4) {
         navbar.classList.add('shrink');
+        document.body.classList.add('navbar-shrink'); // nueva clase
       } else {
         navbar.classList.remove('shrink');
+        document.body.classList.remove('navbar-shrink'); // la quitamos
       }
     });
   </script>
+  
   
   
 
