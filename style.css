@@ -10,9 +10,9 @@
   }
   
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f7f9fc;
-    color: #333;
+    font-family: 'cursive', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #93b39a;
+    color: #112a66;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,10 +24,10 @@
     width: 100%;
     max-width: 1000px;
     background-color: #ffffff;
-    border-radius: 1rem;
+    border-radius: 2rem;
     padding: 2rem;
     margin: 1rem 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0px 40px 10px rgba(0, 225, 255, 0.05);
   }
   
   /* HEADER */
@@ -36,8 +36,8 @@
   }
   
   header h1 {
-    font-size: 2.2rem;
-    color: #1a1a1a;
+    font-size: 5rem;
+    color: #140266;
   }
   
   nav {
@@ -217,4 +217,15 @@
       margin: 0.5rem 0;
     }
   }
+
+  @media (max-width: 600px) {
+    .product-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
   
+  .product-item:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+  }
