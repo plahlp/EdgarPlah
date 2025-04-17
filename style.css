@@ -1,245 +1,220 @@
-
-body {
-    padding-top: 100px; /* Ajusta según la altura del header */
-    font-family: Arial, sans-serif;
+/* RESET Y FUENTES */
+* {
     margin: 0;
-    /*padding: 0;*/
-    scroll-behavior: smooth;
-    background-color: #f9f9f9;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-  header {
-    background-color: #222;
-    color: white;
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 1rem;
+  }
+  
+  /* CONTENEDOR GENERAL */
+  header, section, footer {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  /* HEADER */
+  header {
     text-align: center;
-    position: fixed;         /* <-- Lo hace fijo */
-    top: 0;                  /* <-- Lo pega arriba */
-    left: 0;
-    width: 100%;             /* <-- Que ocupe todo el ancho */
-    z-index: 1000;           /* <-- Que esté encima del resto */
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+  }
+  
+  nav {
+    margin-top: 1rem;
   }
   
   nav a {
-    color: white;
-    margin: 0 1rem;
+    margin: 0 0.75rem;
     text-decoration: none;
+    color: #4a4a4a;
+    font-weight: 500;
+    transition: color 0.3s;
   }
   
+  nav a:hover {
+    color: #0056b3;
+  }
+  
+  /* HERO SECTION */
   .hero {
-    background: linear-gradient(to right, #007bff, #00d4ff);
-    color: white;
-    padding: 3rem 1rem;
     text-align: center;
   }
   
-  section {
-    padding: 2rem 1rem;
-    max-width: 900px;
-    margin: auto;
+  .hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
   
-  ul {
-    list-style: square;
-    padding-left: 2rem;
-  }
-  
-  .tarjeta {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    margin: 1rem 0;
-    padding: 1rem;
-  }
-  
-  .tarjeta img {
-    max-width: 100%;
-    border-radius: 8px;
+  .hero p {
+    font-size: 1.1rem;
+    color: #555;
   }
   
   .btn {
     display: inline-block;
     margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
+    padding: 0.75rem 1.5rem;
+    background-color: #e0e7ff;
+    color: #1f2937;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
   }
   
-  iframe {
-    width: 100%;
-    max-width: 560px;
-    height: 315px;
-    display: block;
-    margin: auto;
+  .btn:hover {
+    background-color: #c7d2fe;
   }
   
-  footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+  /* LISTAS */
+  ul {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
   }
   
-  #redes {
-    padding: 2rem 1rem;
-    max-width: 600px;
-    margin: auto;
+  li {
+    margin-bottom: 0.5rem;
   }
   
+  /* REDES SOCIALES */
   .red {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
     margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-  }
-  
-  .red:hover {
-    transform: scale(1.02);
   }
   
   .red a {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    color: #333;
+    gap: 0.75rem;
     text-decoration: none;
-    font-size: 1.1rem;
+    color: #374151;
+    font-weight: 500;
   }
   
   .red img {
-    width: 32px;
-    height: 32px;
-    margin-left: 10px;
-  }
-
-  #sobre-mi {
-    text-align: center;
-    max-width: 600px;
-    margin: auto;
-    padding: 2rem 1rem;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    width: 24px;
+    height: 24px;
   }
   
-  #sobre-mi h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  #sobre-mi p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-  }
-  
-  #sobre-mi ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  #sobre-mi li {
-    padding: 0.5rem 0;
-    font-weight: bold;
-  }
-
-  #proyectos {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  
+  /* TIENDA Y PROYECTOS */
+  .contenedor-tienda,
   .contenedor-proyectos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
-    max-width: 1000px;
-    margin: auto;
+    margin-top: 1.5rem;
   }
   
+  .tarjeta-producto,
   .tarjeta-proyecto {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-decoration: none;
-    color: inherit;
+    background-color: #f9fafb;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     padding: 1rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .tarjeta-proyecto:hover {
-    transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  }
-  
-  .tarjeta-proyecto img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .tarjeta-proyecto h3 {
-    margin: 0.5rem 0 0.3rem;
-    font-size: 1.2rem;
-  }
-  
-  .tarjeta-proyecto p {
-    font-size: 0.95rem;
-    color: #444;
-  }
-
-  .contenedor-tienda {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .tarjeta-producto {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
     text-align: center;
-    background-color: #f9f9f9;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease;
   }
   
-  .tarjeta-producto:hover {
-    transform: scale(1.02);
+  .tarjeta-producto:hover,
+  .tarjeta-proyecto:hover {
+    transform: translateY(-5px);
   }
   
-  .tarjeta-producto img {
+  .tarjeta-producto img,
+  .tarjeta-proyecto img {
     max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    border-radius: 0.5rem;
   }
   
   .boton-compra {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #28c76f;
-    color: white;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #d1fae5;
+    color: #065f46;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background 0.3s;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
   }
   
   .boton-compra:hover {
-    background-color: #20b25d;
+    background-color: #a7f3d0;
   }
   
+  /* YOUTUBE */
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 1rem;
+    display: block;
+    margin: auto;
+  }
   
+  /* FOOTER */
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    padding: 1rem;
+  }
   
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+  
+    nav a {
+      display: inline-block;
+      margin: 0.5rem 0.5rem;
+      font-size: 0.95rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.5rem;
+    }
+  
+    .btn {
+      font-size: 0.95rem;
+      padding: 0.6rem 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding: 1rem 0.5rem;
+    }
+  
+    .contenedor-tienda,
+    .contenedor-proyectos {
+      grid-template-columns: 1fr;
+    }
+  
+    nav a {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  }
   
