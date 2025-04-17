@@ -1,1 +1,144 @@
-<h1>Hola mundo</h1>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Página Personal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #222;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #1a73e8;
+    }
+
+    .product {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+
+    iframe {
+      max-width: 100%;
+      border: none;
+      border-radius: 8px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #111;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mi Nombre</h1>
+    <p>Bienvenido a mi página personal</p>
+  </header>
+
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#productos">Artículos</a>
+    <a href="#youtube">YouTube</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Hola, soy [tu nombre], me dedico a [tu actividad] y esta es mi página personal.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/tuusuario" target="_blank">Instagram</a>
+      <a href="https://twitter.com/tuusuario" target="_blank">Twitter</a>
+      <a href="https://www.linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <section id="productos">
+    <h2>Artículos en venta</h2>
+    <div class="product">
+      <h3>Producto 1</h3>
+      <p>Descripción del producto 1.</p>
+      <strong>$100 MXN</strong>
+    </div>
+    <div class="product">
+      <h3>Producto 2</h3>
+      <p>Descripción del producto 2.</p>
+      <strong>$200 MXN</strong>
+    </div>
+  </section>
+
+  <section id="youtube">
+    <h2>Último video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ID_DEL_VIDEO" allowfullscreen></iframe>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Te interesa un proyecto o colaboración? Envíame un mensaje:</p>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea rows="5" placeholder="Tu mensaje"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+</body>
+</html>
