@@ -229,6 +229,7 @@
     transform: scale(1.02);
     transition: transform 0.2s ease;
   }
+
 /* NAVBAR STICKY GLASS */
 .navbar {
     position: sticky;
@@ -297,9 +298,13 @@
   }
   
   .header-img img {
-    max-width: 160px;
+    max-width: 400px; /* o cámbialo según necesites */
+    width: 100%;
+    height: auto;
     border-radius: 1rem;
+    object-fit: contain; /* para que no se deforme */
   }
+  
   
   .header-texto h2 {
     font-size: 1.4rem;
