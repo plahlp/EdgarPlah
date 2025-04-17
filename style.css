@@ -10,7 +10,7 @@
   }
   
   body {
-    font-family: 'cursive', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #93b39a;
     color: #112a66;
     display: flex;
@@ -229,3 +229,77 @@
     transform: scale(1.02);
     transition: transform 0.2s ease;
   }
+
+/* NAVBAR GENERAL */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* TÍTULO DEL LOGO */
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #093470;
+    transition: font-size 0.3s ease;
+  }
+  
+  /* MENU */
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .menu ul li a:hover {
+    color: #1d4ed8;
+  }
+  
+  /* EFECTO SHRINK */
+  .navbar.shrink {
+    padding: 0.5rem 1.5rem;
+    background-color: #f9fafb;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar.shrink .logo {
+    font-size: 1.4rem;
+  }
+  
+  /* SIEMPRE HORIZONTAL, INCLUSO EN MÓVIL */
+  @media (max-width: 600px) {
+    .menu ul {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 1rem;
+    }
+  
+    .menu ul li {
+      white-space: nowrap;
+    }
+  
+    .navbar {
+      padding: 1rem;
+    }
+  
+    .navbar.shrink {
+      padding: 0.5rem 1rem;
+    }
+  }
+  
